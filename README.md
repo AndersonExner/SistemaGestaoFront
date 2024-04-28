@@ -13,7 +13,9 @@ https://react-bootstrap.netlify.app/
 
 BackEnd:
 Java Spring Boot
+
 JPA + Hibernate
+
 Banco de Dados Postgree SQL
 
 https://start.spring.io/
