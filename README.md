@@ -14,7 +14,9 @@ https://react-bootstrap.netlify.app/
 BackEnd:
 Java Spring Boot
 
-JPA + Hibernate
+Gerenciamento de Dados 
+
+JPA + Hibernate + Flyaway
 
 Banco de Dados Postgree SQL
 
