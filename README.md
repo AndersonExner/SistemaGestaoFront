@@ -14,13 +14,15 @@ BackEnd: Java Spring Boot
 
 Gerenciamento de Dados
 
-JPA + Hibernate + Flyaway
+JPA + Hibernate + FlyWay
 
 Banco de Dados Postgree SQL
 
 https://start.spring.io/
 
 https://hibernate.org/orm/
+
+https://flywaydb.org/
 
 Para rodar o Front End:
 
