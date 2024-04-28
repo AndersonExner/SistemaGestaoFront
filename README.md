@@ -25,6 +25,8 @@ https://hibernate.org/orm/
 Para rodar o Front End:
 
 -Clonar o Repositório
+
 -Npm Install
+
 -Npm run start
 
