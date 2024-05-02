@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import  Button  from "react-bootstrap/Button";
 import  Card  from "react-bootstrap/Card";
 import  Stack  from "react-bootstrap/Stack";
 import { ModalFuncionario, ModalFuncionarioType } from "../components/ModalFunionario";
+import { Tab, TabContainer, Tabs } from "react-bootstrap";
+import { CardBodyFuncionario, CardBodyFuncionarioType } from "../components/CardBodyFuncionario";
 
 export type FuncionarioTipo =  'Caixa' | 'Gerente' | 'Adminstrador' | 'Freelancer' | 'Outro'
 
@@ -22,33 +24,32 @@ export const FuncionarioTipoObj: Array<IFuncionarioTipoObj> = [
 export const Funcionarios = () => {
 
     //states modal
-    const [modeModal, setModeModal] = useState<ModalFuncionarioType>('NovoFuncionario')
-    const [showModal, setShowModal] = useState<boolean>(false) 
     const [idFuncionario, setIdFuncionario] = useState<string>('')
-
-    const abrirModalFuncionario = () => {
-        setModeModal('NovoFuncionario')
-        setShowModal(true)
-    }
-
-    const handleCloseModal = () => { 
-        setShowModal(false);
-    }
-
+    const [tabOpen, setTabOpen] = useState<CardBodyFuncionarioType>('Home')
+    
     return (
         <div className="main">
             <Card>
                 <Card.Header>
                     <Stack direction="horizontal">
                         <h4>Controle De Funcionários</h4>
-                        <Button className="ms-auto mb-2" variant="primary" onClick={() => abrirModalFuncionario()}>Cadastrar Funcionário</Button>
+                        <Tabs 
+                            id="tabs"
+                            className="ms-auto mb-1"
+                            activeKey={tabOpen}
+                            onSelect={(k) => setTabOpen( k === "Home" ? "Home" : "Cadastrar")}
+                        >
+                            <Tab eventKey="Home" title="Funcionários Cadastrados">
+                            </Tab>
+                            <Tab eventKey="Cadastrar" title="Cadastrar Novo Funcionário">
+                            </Tab>
+                        </Tabs>
                     </Stack>
                 </Card.Header>
-                <Card.Body>
-
-                </Card.Body>
+                {
+                    <CardBodyFuncionario mode={tabOpen}/>
+                }
             </Card>
-            <ModalFuncionario handleClose={handleCloseModal} open={showModal} id={idFuncionario} mode={modeModal}/>
         </div>
     )
 };

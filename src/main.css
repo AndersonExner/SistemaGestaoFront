@@ -162,6 +162,23 @@ hr {
   position: sticky;
 }
 
+.card .card-header .hstack .nav-item {
+  margin-left: 5px;
+}
+
+.card .card-header .hstack .nav-item {
+  margin-left: 5px;
+}
+
+.card .card-header .hstack .nav-item .nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.card .card-header .hstack .nav-item :hover {
+  border-bottom: none;
+}
+
 .card .card-body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
