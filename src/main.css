@@ -61,6 +61,7 @@ body,
   height: calc(100vh - 3.5rem);
   padding: 1rem 6rem;
   overflow: hidden;
+  margin-top: 1.5rem;
 }
 
 h1,
@@ -143,6 +144,10 @@ hr {
   }
 }
 
+.container-fluid {
+  padding: 0;
+}
+
 .card {
   height: 100%;
   padding: 1.5rem 3rem;
@@ -182,6 +187,8 @@ hr {
 .card .card-body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-terrary:hover {
