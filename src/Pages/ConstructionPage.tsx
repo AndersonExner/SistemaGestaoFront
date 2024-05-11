@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import  Card  from "react-bootstrap/Card";
 
 
-export const NotFoundPage = () => {
+export const ConstructionPage = () => {
 
-    const image = require('../shared/imgs/404.jpg')
+    const image = require('../Shared/imgs/const.avif')
 
     const style : React.CSSProperties = {
         backgroundImage: `url(${image})`,

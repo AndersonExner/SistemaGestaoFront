@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "../Pages/Home";
 import { Funcionarios } from "../Pages/Funcionario";
-import { NotFoundPage } from "../Pages/NotFound";
-import { ConstructionPage } from "../Pages/NotFound copy";
+import { NotFoundPage } from "../Pages/NotFoundPage";
+import { ConstructionPage } from "../Pages/ConstructionPage";
+
 
 export const AppRoutes = () => {
     return (
@@ -14,7 +15,7 @@ export const AppRoutes = () => {
             <Route path='/Cadastros/Fornecedores' element={<ConstructionPage />} />
             <Route path='/Adminstracao/Estoque' element={<ConstructionPage />} />
             <Route path='/Adminstracao/Vendas' element={<ConstructionPage />} />
-            <Route path='*' element={<ConstructionPage />} />
+            <Route path='*' element={<NotFoundPage />} />
         </Routes>
     )
 };

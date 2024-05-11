@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { FuncionarioTipo, FuncionarioTipoObj } from "../Pages/Funcionario";
+import { FuncionarioTipoObj } from "../Pages/Funcionario";
 import { Button, Col, FloatingLabel, Form, Modal, Row, Spinner } from "react-bootstrap";
+import { FuncionarioTipo } from "../Store/typeStore/funcionarioTypeStore";
+
 
 export type ModalFuncionarioType = 'NovoFuncionario' | 'EditarFuncionario'
 
@@ -30,9 +32,11 @@ export const ModalFuncionario = ({ open, mode, handleClose, id }: IModalFunciona
         if (mode === 'NovoFuncionario') {
             setIsLoading(true)
             alert('Cadastrando Funcionario')
+            setIsLoading(false)
         }
 
         if (mode === 'EditarFuncionario') {
+            
             alert('Editando Funcionario')
         }
     }
